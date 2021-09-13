@@ -1,0 +1,23 @@
+PREPARE DATA IN EXCEL/CSV
+    > Go to /Users/amandeepdhaliwal/OneDrive/iBuy2020/iBuyAppTech/Market Data
+    > Go to data generator, make changes as required to field names, calculations etc.
+    > Copy table from the 'Data Generator' tab
+    > Replace data in 'uploadThisCSVToGetPrograms'
+
+CONVERT CSV TO JSON
+    > OPEN https://csvjson.com/csv2json
+    > UPLOAD uploadThisCSVToGetPrograms.csv to the webpage above
+    > convert to array and copy output
+
+PUSH JSON TO FIRESTORE
+    > Look for folder 'PushDataToFirestore'... replace code within 'retailerPrograms.js' with the copied output from above
+    > in terminal navigate to folder 'PushDataToFirestore'
+    > Run the following command "node retailerPrograms.js"
+
+** NOTE - This will add more that to retaiilerPrograms on FireStore. If retailerPrograms collection does not exist, this code will create it.
+
+GOOD REFERENCE BLOG
+> https://medium.com/@devesu/how-to-upload-data-to-firebase-firestore-cloud-database-63543d7b34c5
+
+GOOD WEBSITE FOR CONVERTING CSV TO JSON
+> https://csvjson.com/csv2json
